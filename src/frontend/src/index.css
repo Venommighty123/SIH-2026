@@ -1,0 +1,265 @@
+@import 'tailwindcss';
+@import 'leaflet/dist/leaflet.css';
+
+/* ---------------------------------------------------------------------------
+   NETRA design tokens.
+   A control-room palette: near-black slate surfaces, a cyan primary that reads
+   as "instrumentation" rather than "marketing", plus explicit semantic colors
+   for the four ANPR confidence / alert severity bands.
+--------------------------------------------------------------------------- */
+@theme {
+  --color-surface-0: oklch(0.16 0.014 258);
+  --color-surface-1: oklch(0.2 0.016 258);
+  --color-surface-2: oklch(0.245 0.018 258);
+  --color-surface-3: oklch(0.295 0.02 258);
+  --color-line: oklch(0.34 0.02 258);
+  --color-line-strong: oklch(0.44 0.025 258);
+
+  --color-ink: oklch(0.97 0.005 258);
+  --color-ink-muted: oklch(0.76 0.014 258);
+  --color-ink-dim: oklch(0.6 0.016 258);
+
+  --color-brand: oklch(0.78 0.14 195);
+  --color-brand-strong: oklch(0.68 0.15 197);
+  --color-brand-dim: oklch(0.42 0.08 200);
+
+  --color-ok: oklch(0.78 0.16 158);
+  --color-warn: oklch(0.83 0.16 85);
+  --color-danger: oklch(0.68 0.2 22);
+  --color-critical: oklch(0.62 0.24 12);
+  --color-info: oklch(0.74 0.14 258);
+  --color-violet: oklch(0.72 0.16 300);
+
+  --font-sans: 'Inter var', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', ui-monospace, monospace;
+
+  --radius-card: 0.75rem;
+
+  --animate-pulse-ring: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-slide-in: slide-in 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-fade-in: fade-in 0.2s ease-out;
+  --animate-sweep: sweep 2.4s linear infinite;
+}
+
+@keyframes pulse-ring {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.9);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sweep {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(320%);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    background-color: var(--color-surface-0);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Tabular numerals everywhere numbers are compared vertically. */
+  .nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklch, var(--color-brand) 35%, transparent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+
+  /* Scrollbars tuned to the dark shell rather than the OS default. */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-line-strong) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--color-line-strong);
+    border-radius: 9999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-ink-dim);
+  }
+}
+
+@layer components {
+  .panel {
+    background-color: var(--color-surface-1);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+  }
+
+  /* Faint grid used behind empty states and video placeholders so the shell
+     never looks like an unstyled blank area. */
+  .grid-fade {
+    background-image:
+      linear-gradient(to right, color-mix(in oklch, var(--color-line) 55%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklch, var(--color-line) 55%, transparent) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  .scanline::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      color-mix(in oklch, var(--color-brand) 7%, transparent) 50%,
+      transparent 100%
+    );
+    background-size: 100% 6px;
+    opacity: 0.5;
+  }
+}
+
+/* ─── Leaflet dark-theme overrides ─────────────────────────────────────── */
+
+/* Tile attribution bar */
+.leaflet-control-attribution {
+  background: color-mix(in oklch, var(--color-surface-0) 82%, transparent) !important;
+  color: var(--color-ink-dim) !important;
+  font-size: 10px !important;
+}
+.leaflet-control-attribution a {
+  color: var(--color-ink-muted) !important;
+}
+
+/* Zoom control */
+.leaflet-control-zoom a {
+  background: var(--color-surface-2) !important;
+  color: var(--color-ink) !important;
+  border-color: var(--color-line) !important;
+}
+.leaflet-control-zoom a:hover {
+  background: var(--color-surface-3) !important;
+}
+
+/* Popup */
+.leaflet-popup-content-wrapper {
+  background: var(--color-surface-2) !important;
+  color: var(--color-ink) !important;
+  border: 1px solid var(--color-line-strong) !important;
+  border-radius: 10px !important;
+  padding: 0 !important;
+  box-shadow: 0 18px 40px -12px rgb(0 0 0 / 0.7) !important;
+}
+.leaflet-popup-tip {
+  background: var(--color-surface-2) !important;
+}
+.leaflet-popup-close-button {
+  color: var(--color-ink-dim) !important;
+  font-size: 16px !important;
+  padding: 2px 7px !important;
+}
+
+/* ─── Camera dot marker ─────────────────────────────────────────────────── */
+.netra-cam-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  border: 2px solid rgb(0 0 0 / 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+.netra-cam-dot:hover,
+.netra-cam-dot.selected {
+  transform: scale(1.45);
+  border-color: white;
+}
+
+/* ─── Trajectory sequence pins ──────────────────────────────────────────── */
+.netra-pin {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  border: 1.5px solid color-mix(in oklch, var(--color-brand) 70%, white 10%);
+  background: color-mix(in oklch, var(--color-surface-0) 88%, var(--color-brand) 12%);
+  color: var(--color-brand);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.55);
+  transition:
+    transform 0.16s ease,
+    background-color 0.16s ease,
+    color 0.16s ease;
+}
+
+.netra-pin:hover {
+  transform: scale(1.16);
+  border-color: white;
+}
+
+.netra-pin.is-active {
+  background: var(--color-brand);
+  color: var(--color-surface-0);
+  border-color: white;
+  transform: scale(1.32);
+  box-shadow:
+    0 0 0 4px color-mix(in oklch, var(--color-brand) 26%, transparent),
+    0 3px 12px rgb(0 0 0 / 0.6);
+}
+

@@ -1,0 +1,17 @@
+[
+  {"camera_id":"c-dwarka-mor","timestamp":"2026-09-09T10:00:00.000Z","type":"density","value":12,"metadata":{"vehicle_class":"mixed","window_sec":5}},
+  {"camera_id":"c-dwarka-mor","timestamp":"2026-09-09T10:05:00.000Z","type":"density","value":18,"metadata":{"vehicle_class":"mixed","window_sec":5}},
+  {"camera_id":"c-dwarka-flyover","timestamp":"2026-09-09T10:06:00.000Z","type":"density","value":9,"metadata":{"vehicle_class":"mixed","window_sec":5}},
+  {"camera_id":"c-nawada","timestamp":"2026-09-09T09:52:00.000Z","type":"density","value":7,"metadata":{"vehicle_class":"mixed","window_sec":5}},
+  {"camera_id":"c-janakpuri-west","timestamp":"2026-09-09T10:30:00.000Z","type":"density","value":11,"metadata":{"vehicle_class":"mixed","window_sec":5}},
+
+  {"camera_id":"c-vikaspuri","timestamp":"2026-09-09T10:18:00.000Z","type":"overspeeding","value":72.4,"metadata":{"vehicle_class":"car","speed_limit_kmph":50,"track_id":"trk_00231"}},
+  {"camera_id":"c-mohan-garden","timestamp":"2026-09-09T10:12:10.000Z","type":"overspeeding","value":84.7,"metadata":{"vehicle_class":"bike","speed_limit_kmph":50,"track_id":"trk_00458"}},
+  {"camera_id":"c-dwarka-sec14","timestamp":"2026-09-09T09:41:00.000Z","type":"overspeeding","value":66.0,"metadata":{"vehicle_class":"car","speed_limit_kmph":40,"track_id":"trk_00119"}},
+  {"camera_id":"c-bindapur","timestamp":"2026-09-09T10:02:00.000Z","type":"overspeeding","value":91.2,"metadata":{"vehicle_class":"truck","speed_limit_kmph":40,"track_id":"trk_00522"}},
+
+  {"camera_id":"c-palam-crossing","timestamp":"2026-09-09T10:08:00.000Z","type":"faulty_driving","value":1,"metadata":{"vehicle_class":"car","reason":"wrong_lane","track_id":"trk_00302"}},
+  {"camera_id":"c-dwarka-mor","timestamp":"2026-09-09T10:03:00.000Z","type":"faulty_driving","value":1,"metadata":{"vehicle_class":"bike","reason":"signal_jump","track_id":"trk_00347"}},
+  {"camera_id":"c-uttam-nagar-east","timestamp":"2026-09-09T10:15:30.000Z","type":"faulty_driving","value":1,"metadata":{"vehicle_class":"car","reason":"sudden_swerve","track_id":"trk_00471"}},
+  {"camera_id":"c-nawada","timestamp":"2026-09-09T09:51:00.000Z","type":"faulty_driving","value":1,"metadata":{"vehicle_class":"auto","reason":"signal_jump","track_id":"trk_00489"}}
+]

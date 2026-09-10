@@ -1,0 +1,807 @@
+[
+  {
+    "license_plate": "DL09WJ9666",
+    "timestamp": "12:00:01.486",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL02QU6590",
+    "timestamp": "12:00:02.530",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL06ZJ4923",
+    "timestamp": "12:00:11.005",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL01VU2612",
+    "timestamp": "12:00:11.516",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL05GB9883",
+    "timestamp": "12:00:11.581",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL02AO2638",
+    "timestamp": "12:00:13.919",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL09FB9320",
+    "timestamp": "12:00:15.221",
+    "node_number": 1
+  },
+  {
+    "license_plate": "HR02XD9935",
+    "timestamp": "12:00:16.518",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL06DC7224",
+    "timestamp": "12:00:18.376",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL10KP1319",
+    "timestamp": "12:00:21.254",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL06HI7484",
+    "timestamp": "12:00:24.866",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL11PG9834",
+    "timestamp": "12:00:25.139",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL08MU8517",
+    "timestamp": "12:00:27.145",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL09VW8973",
+    "timestamp": "12:00:29.411",
+    "node_number": 1
+  },
+  {
+    "license_plate": "HR12PM4997",
+    "timestamp": "12:00:29.514",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL02HL5669",
+    "timestamp": "12:00:29.971",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL06DJ8123",
+    "timestamp": "12:00:30.049",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL06RC3267",
+    "timestamp": "12:00:30.166",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL03RX5010",
+    "timestamp": "12:00:31.046",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL08GM1960",
+    "timestamp": "12:00:31.281",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL08WI7043",
+    "timestamp": "12:00:33.557",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL09OE7912",
+    "timestamp": "12:00:34.862",
+    "node_number": 1
+  },
+  {
+    "license_plate": "HR01YN4585",
+    "timestamp": "12:00:35.177",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL06ZD5073",
+    "timestamp": "12:00:36.402",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL01VU2612",
+    "timestamp": "12:00:36.634",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL10QK5272",
+    "timestamp": "12:00:38.809",
+    "node_number": 1
+  },
+  {
+    "license_plate": "HR02MW4986",
+    "timestamp": "12:00:39.806",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL02GS6155",
+    "timestamp": "12:00:40.399",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL09ON2020",
+    "timestamp": "12:00:41.366",
+    "node_number": 3
+  },
+  {
+    "license_plate": "HR12BA2535",
+    "timestamp": "12:00:41.541",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL01IM6363",
+    "timestamp": "12:00:42.332",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL09OD5061",
+    "timestamp": "12:00:42.692",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL01CW1964",
+    "timestamp": "12:00:43.498",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL01KC9423",
+    "timestamp": "12:00:45.220",
+    "node_number": 1
+  },
+  {
+    "license_plate": "HR01AX5506",
+    "timestamp": "12:00:46.529",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL05OC5681",
+    "timestamp": "12:00:46.898",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL06DC7224",
+    "timestamp": "12:00:49.837",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL03HX9830",
+    "timestamp": "12:00:49.920",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL03XP8373",
+    "timestamp": "12:00:51.838",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL01MI8454",
+    "timestamp": "12:00:54.197",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL10KP1319",
+    "timestamp": "12:01:00.224",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL06ZJ4923",
+    "timestamp": "12:01:00.481",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL08ST7209",
+    "timestamp": "12:01:07.279",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL09FB9320",
+    "timestamp": "12:01:08.646",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL10NS7543",
+    "timestamp": "12:01:08.779",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL06FP4475",
+    "timestamp": "12:01:10.964",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL09TG3504",
+    "timestamp": "12:01:11.043",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL07TC7304",
+    "timestamp": "12:01:12.507",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL01KC9423",
+    "timestamp": "12:01:12.898",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL11PG9834",
+    "timestamp": "12:01:14.337",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL02AO2638",
+    "timestamp": "12:01:15.001",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL01HB6168",
+    "timestamp": "12:01:16.221",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL02YH3724",
+    "timestamp": "12:01:17.218",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL08GM1960",
+    "timestamp": "12:01:19.113",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL01CW1964",
+    "timestamp": "12:01:20.998",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL09WJ9666",
+    "timestamp": "12:01:22.945",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL03WG2052",
+    "timestamp": "12:01:22.973",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL07VU7118",
+    "timestamp": "12:01:23.239",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL09VW8973",
+    "timestamp": "12:01:23.842",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL05GB9883",
+    "timestamp": "12:01:23.994",
+    "node_number": 3
+  },
+  {
+    "license_plate": "HR12BA2535",
+    "timestamp": "12:01:25.605",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL04DM5554",
+    "timestamp": "12:01:26.147",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL06ZD5073",
+    "timestamp": "12:01:26.897",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL02GS6155",
+    "timestamp": "12:01:26.977",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL08UW9041",
+    "timestamp": "12:01:29.634",
+    "node_number": 2
+  },
+  {
+    "license_plate": "HR01AX5506",
+    "timestamp": "12:01:30.042",
+    "node_number": 2
+  },
+  {
+    "license_plate": "HR02PT2193",
+    "timestamp": "12:01:31.083",
+    "node_number": 2
+  },
+  {
+    "license_plate": "HR01RH2988",
+    "timestamp": "12:01:31.292",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL10ZR8921",
+    "timestamp": "12:01:32.974",
+    "node_number": 3
+  },
+  {
+    "license_plate": "HR02XD9935",
+    "timestamp": "12:01:33.487",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL03RX5010",
+    "timestamp": "12:01:34.237",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL06BB8811",
+    "timestamp": "12:01:35.541",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL11IY9540",
+    "timestamp": "12:01:36.919",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL08HI8140",
+    "timestamp": "12:01:37.128",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL02HX7658",
+    "timestamp": "12:01:37.715",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL02HL5669",
+    "timestamp": "12:01:42.067",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL06FL6820",
+    "timestamp": "12:01:44.069",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL09DM2291",
+    "timestamp": "12:01:44.887",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL06HI7484",
+    "timestamp": "12:01:45.428",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL10ZB6688",
+    "timestamp": "12:01:46.549",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL06DJ8123",
+    "timestamp": "12:01:49.817",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL04MD5033",
+    "timestamp": "12:01:49.994",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL10QK5272",
+    "timestamp": "12:01:51.103",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL06IT5526",
+    "timestamp": "12:01:51.158",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL06AS4770",
+    "timestamp": "12:01:51.803",
+    "node_number": 1
+  },
+  {
+    "license_plate": "HR26NH8359",
+    "timestamp": "12:01:51.960",
+    "node_number": 1
+  },
+  {
+    "license_plate": "HR03VS7046",
+    "timestamp": "12:01:52.793",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL08MU8517",
+    "timestamp": "12:01:55.070",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL05WV2169",
+    "timestamp": "12:01:55.734",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL01MI8454",
+    "timestamp": "12:01:58.006",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL07WG2245",
+    "timestamp": "12:01:58.419",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL10NS7543",
+    "timestamp": "12:01:58.536",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL03HX9830",
+    "timestamp": "12:02:02.665",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL09TG3504",
+    "timestamp": "12:02:02.821",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL01HG1333",
+    "timestamp": "12:02:04.267",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL01TC7868",
+    "timestamp": "12:02:04.900",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL07GD2588",
+    "timestamp": "12:02:05.206",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL09YE3103",
+    "timestamp": "12:02:05.352",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL09OE7912",
+    "timestamp": "12:02:06.283",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL08DN6934",
+    "timestamp": "12:02:07.117",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL03CT2113",
+    "timestamp": "12:02:08.290",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL08QI1188",
+    "timestamp": "12:02:09.253",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL07IU4598",
+    "timestamp": "12:02:10.076",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL09DM2291",
+    "timestamp": "12:02:10.135",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL01HB6168",
+    "timestamp": "12:02:11.306",
+    "node_number": 2
+  },
+  {
+    "license_plate": "HR01YZ3615",
+    "timestamp": "12:02:12.646",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL09OD5061",
+    "timestamp": "12:02:13.439",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL11TL4150",
+    "timestamp": "12:02:13.868",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL07GR4295",
+    "timestamp": "12:02:15.460",
+    "node_number": 1
+  },
+  {
+    "license_plate": "HR26TA4257",
+    "timestamp": "12:02:16.043",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL02YH3724",
+    "timestamp": "12:02:17.717",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL06TI1711",
+    "timestamp": "12:02:18.649",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL03QP2489",
+    "timestamp": "12:02:23.598",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL06VV7624",
+    "timestamp": "12:02:24.836",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL05WV2169",
+    "timestamp": "12:02:26.001",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL02VR5371",
+    "timestamp": "12:02:26.033",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL10SP4981",
+    "timestamp": "12:02:29.077",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL04DM5554",
+    "timestamp": "12:02:29.765",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL05CP1317",
+    "timestamp": "12:02:29.804",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL06YM5558",
+    "timestamp": "12:02:30.401",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL02EU3621",
+    "timestamp": "12:02:30.495",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL08AL5892",
+    "timestamp": "12:02:30.695",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL08HC8260",
+    "timestamp": "12:02:33.524",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL10CC8962",
+    "timestamp": "12:02:35.044",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL07VU7118",
+    "timestamp": "12:02:35.805",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL06HU2124",
+    "timestamp": "12:02:36.246",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL07TC7304",
+    "timestamp": "12:02:38.030",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL09DB9856",
+    "timestamp": "12:02:38.845",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL03QD5889",
+    "timestamp": "12:02:39.917",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL09XX9947",
+    "timestamp": "12:02:39.973",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL06BB8811",
+    "timestamp": "12:02:43.627",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL06NN8651",
+    "timestamp": "12:02:44.128",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL04MD5033",
+    "timestamp": "12:02:45.086",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL09FI9645",
+    "timestamp": "12:02:45.762",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL10XQ7991",
+    "timestamp": "12:02:46.113",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL02WY5941",
+    "timestamp": "12:02:50.058",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL07YS1320",
+    "timestamp": "12:02:51.346",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL02UN3223",
+    "timestamp": "12:02:53.370",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL03RY9689",
+    "timestamp": "12:02:54.513",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL03CT2113",
+    "timestamp": "12:02:54.561",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL06HC5569",
+    "timestamp": "12:02:56.326",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL11JO6180",
+    "timestamp": "12:02:56.513",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL07GD2588",
+    "timestamp": "12:02:57.170",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL04QI3170",
+    "timestamp": "12:02:57.319",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL09YE3103",
+    "timestamp": "12:02:58.245",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL09JV2697",
+    "timestamp": "12:02:58.396",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL03TR1441",
+    "timestamp": "12:03:01.385",
+    "node_number": 2
+  },
+  {
+    "license_plate": "HR03IE4527",
+    "timestamp": "12:03:01.870",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL01TC7868",
+    "timestamp": "12:03:02.450",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL02VR5371",
+    "timestamp": "12:03:03.589",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL01XX5315",
+    "timestamp": "12:03:04.658",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL07GR4295",
+    "timestamp": "12:03:05.040",
+    "node_number": 3
+  },
+  {
+    "license_plate": "HR26NH8359",
+    "timestamp": "12:03:05.085",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL03JD1420",
+    "timestamp": "12:03:05.777",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL01VH5741",
+    "timestamp": "12:03:07.192",
+    "node_number": 1
+  },
+  {
+    "license_plate": "DL11QR6198",
+    "timestamp": "12:03:10.007",
+    "node_number": 3
+  },
+  {
+    "license_plate": "HR01YZ3615",
+    "timestamp": "12:03:13.025",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL03NF9548",
+    "timestamp": "12:03:13.094",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL10CC8962",
+    "timestamp": "12:03:15.649",
+    "node_number": 2
+  },
+  {
+    "license_plate": "DL07IU4598",
+    "timestamp": "12:03:15.852",
+    "node_number": 3
+  },
+  {
+    "license_plate": "DL06AS4770",
+    "timestamp": "12:03:18.196",
+    "node_number": 2
+  }
+]

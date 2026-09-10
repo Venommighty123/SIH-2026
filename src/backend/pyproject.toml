@@ -1,0 +1,19 @@
+[project]
+name = "sih"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fast-plate-ocr[onnx]>=1.1.0",
+    "paddleocr>=3.7.0",
+    "pandas>=3.0.5",
+    "python-levenshtein>=0.27.4",
+    "sentencepiece>=0.2.2",
+    "tiktoken>=0.14.0",
+    "tokenizers>=0.20.3",
+    "torch>=2.13.0",
+    "tqdm>=4.70.0",
+    "transformers==4.46.3",
+    "ultralytics>=8.4.137",
+]
