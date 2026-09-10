@@ -48,13 +48,15 @@ CCTV Feeds (Multiple Cameras)
         v
 +------------------------------+
 |  Stage 1 - Vehicle Tracker   |  YOLOv11 + Kalman Filter + Fine-tuned Plate Detector
-|  (run_stage1.py)             |  -> crop manifest CSV + annotated video
+|  (scripts/run_stage1.py ->   |  -> crop manifest CSV + annotated video
+|   anpr/detection.py)         |
 +------------------------------+
         |
         v
 +------------------------------+
 |  Stage 2 - OCR Engine        |  Real-ESRGAN Enhancement -> PARSeq OCR
-|  (run_stage2.py)             |  -> Temporal majority-vote per track
+|  (scripts/run_stage2.py ->   |  -> Temporal majority-vote per track
+|   anpr/ocr.py)               |
 +------------------------------+
         |
         v
@@ -64,7 +66,7 @@ CCTV Feeds (Multiple Cameras)
         |
         v
 +------------------------------+
-|  Frontend Console (RAASTA)    |  React + MapLibre GL - live dashboard & search
+|  Frontend Console (RAASTA)    |  React + Leaflet - live dashboard & search
 +------------------------------+
 ```
 
@@ -77,7 +79,7 @@ CCTV Feeds (Multiple Cameras)
 - 🚗 **Multi-Camera Vehicle Detection & Tracking** – YOLOv11 + Kalman filtering across frames
 - 🗺️ **Vehicle Trajectory Mapping** – Reconstructs a vehicle's city-wide path across camera zones
 - 📊 **Real-Time Traffic Density Analytics** – Per-zone and per-timeframe vehicle counts
-- 🔥 **Heatmap / Hotspot Visualization** – Identifies congestion zones on an interactive city map (MapLibre GL)
+- 🔥 **Heatmap / Hotspot Visualization** – Identifies congestion zones on an interactive city map (Leaflet)
 - 🔎 **License Plate Search & Lookup** – Instant query into detection history
 - ⏱️ **Vehicle Speed / Travel Time Estimation** – Calculated between known camera geopoints
 - 🚨 **Alert System for Stolen / Wanted Vehicles** – Flagging on plate match
@@ -94,7 +96,7 @@ CCTV Feeds (Multiple Cameras)
 | React 19 + TypeScript | UI framework |
 | Vite 8 | Build tool & dev server |
 | TailwindCSS 4 | Styling |
-| MapLibre GL | Interactive map & trajectory visualization |
+| Leaflet | Interactive map & trajectory visualization |
 | Recharts | Traffic analytics charts |
 | TanStack Query (React Query) | Server state & data fetching |
 | Zustand | Client-side state management |
@@ -126,7 +128,7 @@ CCTV Feeds (Multiple Cameras)
 
 ## 6. Architecture
 
-See [`docs/architecture.md`](./docs/architecture.md) for the full architecture diagram.
+See [`Pipeline`](.SIH-2026/docs/pipeline.jpeg) for the full architecture diagram.
 
 ```
 +------------------------------------------+
@@ -175,20 +177,26 @@ SIH-2026/
 │   │   ├── package.json
 │   │   └── vite.config.ts
 │   └── backend/                 <- Python ANPR pipeline
-│       ├── anpr/                <- Core pipeline modules
-│       │   ├── config.py
-│       │   ├── common.py
-│       │   ├── track_memory.py
-│       │   ├── enhancement.py
-│       │   ├── ocr_ensemble.py
-│       │   ├── testing_yolo.py  (Stage 1 tracker)
-│       │   ├── main.py          (Stage 2 OCR)
-│       │   ├── run_pipeline.py  (end-to-end runner)
+│       ├── anpr/                <- Core pipeline package (importable library)
+│       │   ├── __init__.py
+│       │   ├── config.py            <- run parameters, sourced from ANPR_* env vars
+│       │   ├── common.py            <- quality-gate scoring, plate warping, OCR text cleanup, temporal vote
+│       │   ├── track_memory.py      <- VehicleKalmanMemory (per-track Kalman filtering)
+│       │   ├── enhancement.py       <- crop enhancement + perspective warp
+│       │   ├── realesrgan_downloader.py  <- downloads/builds the Real-ESRGAN binary
+│       │   ├── ocr_ensemble.py      <- PARSeq OCR backend + predict_frame()
+│       │   ├── detection.py         <- Stage 1: TrackingConfig + VehiclePlateTracker
+│       │   └── ocr.py               <- Stage 2: manifest loading, OCR loop, aggregate_track()
+│       ├── scripts/             <- Thin CLI entry points (not importable library code)
 │       │   ├── run_stage1.py
-│       │   └── run_stage2.py
+│       │   ├── run_stage2.py
+│       │   ├── run_pipeline.py
+│       │   └── preview_results.py
+│       ├── tests/               <- Unit tests (e.g. common.py's vote_final_plate, clean_ocr_text)
 │       ├── models/              <- YOLO & plate detector weights
-│       ├── scripts/
+│       ├── .env.example         <- Documents required ANPR_* environment variables
 │       ├── pyproject.toml
+│       ├── requirements.txt
 │       └── tracker.yaml
 ├── docs/
 │   └── architecture.md
@@ -201,7 +209,9 @@ SIH-2026/
 
 | Item | Location |
 |---|---|
-| AI pipeline source code | `src/backend/anpr/` |
+| AI pipeline library code (detection, OCR, config) | `src/backend/anpr/` |
+| AI pipeline CLI entry points | `src/backend/scripts/` |
+| AI pipeline unit tests | `src/backend/tests/` |
 | Frontend console source | `src/frontend/src/` |
 | Architecture / technical docs | `docs/` |
 | Screenshots / prototype photos | `assets/screenshots/` |
@@ -221,7 +231,7 @@ SIH-2026/
 
 ## 9. Final Presentation
 
-The final SIH presentation is linked in [`https://drive.google.com/file/d/1xCVSm5f2r3LkisYntVF_1LcoaO-3ti60/view?usp=sharing`](./submission/PRESENTATION.md).
+The final SIH presentation is linked in [`submission/PRESENTATION.md`](./submission/PRESENTATION.md).
 
 ---
 
@@ -282,14 +292,26 @@ uv sync
 pip install -r requirements.txt
 ```
 
-Configure the pipeline by editing `anpr/config.py` (or set `ANPR_*` environment variables):
+Configure the pipeline via environment variables — `anpr/config.py` reads these at
+runtime, so no source files need editing:
 
-```python
-# Key settings in config.py
-VIDEO_PATH = "path/to/your/video.mp4"
-OUT_DIR    = "output/"
-DEVICE     = "cuda"   # or "cpu"
+```bash
+# Configure environment
+cp .env.example .env
+# Edit .env with your video path, model weights, tracker config, and thresholds
 ```
+
+Key variables (see `.env.example` for the full list):
+
+| Variable | Purpose |
+|---|---|
+| `ANPR_VIDEO_PATH` | Source video |
+| `ANPR_PLATE_WEIGHTS` | Your fine-tuned plate detector |
+| `ANPR_VEHICLE_WEIGHTS` | Vehicle detector weights (defaults to stock `yolov8n.pt`) |
+| `ANPR_TRACKER_CONFIG` | Ultralytics tracker config (e.g. `tracker.yaml`) |
+| `ANPR_OUT_DIR` | Output directory for Stage 1 artifacts |
+| `ANPR_DEVICE` | `cuda` or `cpu` |
+| `ANPR_READINGS_OUTPUT` | Final JSON output path |
 
 ---
 
@@ -299,20 +321,20 @@ DEVICE     = "cuda"   # or "cpu"
 
 ```bash
 cd src/backend
-python anpr/run_pipeline.py
+python scripts/run_pipeline.py
 ```
 
 ### Run stages individually
 
 ```bash
 # Stage 1: Vehicle tracking + plate crop extraction
-python anpr/run_stage1.py
+python scripts/run_stage1.py
 
 # Stage 2: OCR + temporal vote aggregation
-python anpr/run_stage2.py --manifest output/<video_run>/plate_crops_manifest.csv
+python scripts/run_stage2.py --manifest output/<video_run>/plate_crops_manifest.csv
 
 # Preview results
-python anpr/preview_results.py
+python scripts/preview_results.py
 ```
 
 ### Run the frontend console
@@ -332,7 +354,7 @@ npm run dev
 - **Stolen/wanted vehicle national DB integration** — Direct API hook into VAHAN/NCRB databases for real-time flagging.
 - **Edge inference on cameras** — Deploy lightweight YOLO models directly on smart IP cameras (NVIDIA Jetson) to reduce bandwidth.
 - **Predictive traffic analytics** — Time-series forecasting of congestion patterns using historical trajectory data.
-- **Mobile app for field officers** — Companion app for on-ground officers to do instant plate lookups tied to the NETRA backend.
+- **Mobile app for field officers** — Companion app for on-ground officers to do instant plate lookups tied to the RAASTA backend.
 - **Improved OCR accuracy** — Fine-tune PARSeq on Indian regional plate fonts and low-light / rain conditions.
 
 ---
