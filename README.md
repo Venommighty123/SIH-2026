@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚗 NETRA — City-Wide AI Engine for Multi-Camera ANPR, Trajectory Tracking & Urban Traffic Analytics
+# 🚗 RAASTA — City-Wide AI Engine for Multi-Camera ANPR, Trajectory Tracking & Urban Traffic Analytics
 
 [![SIH 2026](https://img.shields.io/badge/SIH-2026-orange?style=for-the-badge)](https://www.sih.gov.in/)
 [![Theme](https://img.shields.io/badge/Theme-Smart%20Automation-blue?style=for-the-badge)]()
@@ -17,7 +17,7 @@
 
 | Field | Details |
 |---|---|
-| **Project Title** | NETRA – City-Wide AI Engine for Multi-Camera ANPR Trajectory Tracking and Urban Traffic Analytics |
+| **Project Title** | RAASTA – City-Wide AI Engine for Multi-Camera ANPR Trajectory Tracking and Urban Traffic Analytics |
 | **PS ID** | SIH26127 |
 | **PS Title** | City-Wide AI Engine for Multi-Camera ANPR Trajectory Tracking and Urban Traffic Analytics |
 | **Category** | Software |
@@ -40,7 +40,7 @@ Urban traffic management systems today lack the intelligence to correlate vehicl
 
 ## 3. Proposed Solution
 
-**NETRA** is an end-to-end AI pipeline that processes CCTV video feeds from multiple city cameras, detects and tracks vehicles, reads license plates, and stitches together a city-wide trajectory for every unique vehicle. A web-based operator console provides real-time analytics, map visualizations, and instant plate search.
+**RAASTA** is an end-to-end AI pipeline that processes CCTV video feeds from multiple city cameras, detects and tracks vehicles, reads license plates, and stitches together a city-wide trajectory for every unique vehicle. A web-based operator console provides real-time analytics, map visualizations, and instant plate search.
 
 ```
 CCTV Feeds (Multiple Cameras)
@@ -64,7 +64,7 @@ CCTV Feeds (Multiple Cameras)
         |
         v
 +------------------------------+
-|  Frontend Console (NETRA)    |  React + MapLibre GL - live dashboard & search
+|  Frontend Console (RAASTA)    |  React + MapLibre GL - live dashboard & search
 +------------------------------+
 ```
 
@@ -152,7 +152,7 @@ See [`docs/architecture.md`](./docs/architecture.md) for the full architecture d
                    | REST / JSON
                    v
 +------------------------------------------+
-|     NETRA Operator Console (React)        |
+|     RAASTA Operator Console (React)        |
 |  Dashboard | Map | Search | Alerts        |
 +------------------------------------------+
 ```
@@ -205,7 +205,6 @@ SIH-2026/
 | Frontend console source | `src/frontend/src/` |
 | Architecture / technical docs | `docs/` |
 | Screenshots / prototype photos | `assets/screenshots/` |
-| Final PPT / presentation | `submission/PRESENTATION.md` |
 | Demo video link | `submission/DEMO.md` |
 | Project overview | `README.md` |
 
@@ -222,7 +221,7 @@ SIH-2026/
 
 ## 9. Final Presentation
 
-The final SIH presentation is linked in [`submission/PRESENTATION.md`](./submission/PRESENTATION.md).
+The final SIH presentation is linked in [`https://drive.google.com/file/d/1xCVSm5f2r3LkisYntVF_1LcoaO-3ti60/view?usp=sharing`](./submission/PRESENTATION.md).
 
 ---
 
@@ -234,7 +233,7 @@ Important screenshots of the operator console, map view, and pipeline outputs ar
 assets/screenshots/
 ```
 
-See [`assets/screenshots/README.md`](./assets/screenshots/README.md) for naming conventions.
+
 
 ---
 
